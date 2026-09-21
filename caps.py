@@ -475,24 +475,53 @@ def run_r4(messages, apply_now=False):
 def run_r5(messages):
     from gate import outbox_count
 
+    outbox_before = outbox_count()
     flagged = []
     for msg in messages:
         why = injection_reason(msg)
         if not why:
             continue
         flagged.append(msg)
+        body = (msg.get("body") or "").lower()
+        if "delete" in body:
+            attempted_action = "delete"
+        elif "forward" in body:
+            attempted_action = "forward"
+        elif "send" in body or "wire" in body:
+            attempted_action = "send"
+        else:
+            attempted_action = "instruction"
         note = (
             f"FLAGGED: {msg['id']} attempted to instruct the assistant "
             f"({why}); not done, left in place."
         )
         print(note)
-        log_event("R5", "refusal", message_id=msg["id"], reason=why)
+        log_event(
+            "R5",
+            "refusal",
+            message_id=msg["id"],
+            attempted_action=attempted_action,
+            result="refused",
+            reason=why,
+        )
 
-    if not flagged:
-        print("No injections found.")
+    outbox_after = outbox_count()
+    outbox_unchanged = outbox_before == outbox_after
+    log_event(
+        "R5",
+        "summary",
+        hostile_count=len(flagged),
+        refused_count=len(flagged),
+        outbox_before=outbox_before,
+        outbox_after=outbox_after,
+        outbox_unchanged=outbox_unchanged,
+    )
 
-    print(f"outbox/ writes: {outbox_count()}")
+    print(f"Hostile messages detected: {len(flagged)}")
+    print(f"Attempted hostile actions refused: {len(flagged)}")
+    print("No hostile action was executed.")
     print("Hostile messages were not deleted.")
+    print(f"Outbox unchanged by R5: {'yes' if outbox_unchanged else 'no'}")
     return flagged
 
 
