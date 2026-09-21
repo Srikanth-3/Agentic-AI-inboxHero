@@ -1,5 +1,6 @@
 import json
 from collections import Counter
+from datetime import datetime
 from html import escape
 from pathlib import Path
 
@@ -257,28 +258,147 @@ def proposed_irreversible(messages):
 
 
 def run_r3(messages, dry_run=True):
-    from gate import outbox_count, require_approval, write_outbox
+    from gate import classify_action, outbox_count, require_approval, write_outbox
 
     before_writes = outbox_count()
     would, blocked = proposed_irreversible(messages)
+    run_id = datetime.now().strftime("%Y%m%d%H%M%S%f")
+    display_id = f"{run_id}-001"
+    display_action = "display"
+    display_detail = "show the proposed R3 actions"
+    display_classification = classify_action(display_action)
+    log_event(
+        "R3",
+        "proposal",
+        action_id=display_id,
+        action=display_action,
+        classification=display_classification,
+        detail=display_detail,
+    )
+    print(f"Reversible action: {display_action} ({display_classification})")
+    print(f"  {display_detail}")
+    log_event(
+        "R3",
+        "result",
+        action_id=display_id,
+        action=display_action,
+        classification=display_classification,
+        status="completed",
+        output="display only",
+    )
+
     print("Would perform (if approved):")
-    for item in would:
+    for index, item in enumerate(would, start=2):
+        action_id = f"{run_id}-{index:03d}"
+        classification = classify_action(item["action"])
+        log_event(
+            "R3",
+            "proposal",
+            action_id=action_id,
+            action=item["action"],
+            classification=classification,
+            detail=item["detail"],
+        )
         print(f"  - {item['action']}: {item['detail']}")
-        if dry_run:
-            require_approval(item["action"], item["detail"], cap="R3", dry_run=True)
 
     print("Blocked (injection / policy):")
-    for item in blocked:
+    for index, item in enumerate(blocked, start=2 + len(would)):
+        action_id = f"{run_id}-{index:03d}"
+        classification = classify_action(item["action"])
         print(f"  - {item['action']}: {item['detail']}")
-        log_event("R3", "gate", action=item["action"], detail=item["detail"], decision="blocked")
+        log_event(
+            "R3",
+            "proposal",
+            action_id=action_id,
+            action=item["action"],
+            classification=classification,
+            detail=item["detail"],
+        )
+        log_event(
+            "R3",
+            "human_response",
+            action_id=action_id,
+            action=item["action"],
+            classification=classification,
+            response="rejected",
+            reason="untrusted email content cannot execute actions",
+        )
+        log_event(
+            "R3",
+            "result",
+            action_id=action_id,
+            action=item["action"],
+            classification=classification,
+            status="not_executed",
+            output="blocked",
+        )
 
     if dry_run:
+        for index, item in enumerate(would, start=2):
+            action_id = f"{run_id}-{index:03d}"
+            authorization = require_approval(
+                item["action"],
+                item["detail"],
+                action_id=action_id,
+                cap="R3",
+                dry_run=True,
+            )
+            if authorization is not None:
+                raise AssertionError("dry-run unexpectedly authorized an action")
+            log_event(
+                "R3",
+                "result",
+                action_id=action_id,
+                action=item["action"],
+                classification="irreversible",
+                status="not_executed",
+                output="dry-run",
+            )
         print(f"outbox/ writes: {outbox_count() - before_writes}")
         return
 
     detail = "write the m008 draft to outbox"
-    if require_approval("send", detail, cap="R3", dry_run=False):
-        write_outbox("m008-reply.txt", "see R2 draft\n", approved=True)
+    action_id = f"{run_id}-002"
+    authorization = require_approval(
+        "send",
+        detail,
+        action_id=action_id,
+        cap="R3",
+        dry_run=False,
+    )
+    if authorization is None:
+        log_event(
+            "R3",
+            "result",
+            action_id=action_id,
+            action="send",
+            classification="irreversible",
+            status="not_executed",
+            output="no outbox write",
+        )
+    else:
+        try:
+            path = write_outbox("m008-reply.txt", "see R2 draft\n", authorization=authorization)
+        except Exception as exc:
+            log_event(
+                "R3",
+                "result",
+                action_id=action_id,
+                action="send",
+                classification="irreversible",
+                status="failed",
+                error=str(exc),
+            )
+            raise
+        log_event(
+            "R3",
+            "result",
+            action_id=action_id,
+            action="send",
+            classification="irreversible",
+            status="executed",
+            output=str(path),
+        )
     print(f"outbox/ writes: {outbox_count() - before_writes}")
 
 
