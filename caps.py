@@ -726,6 +726,74 @@ def run_x2(messages, decisions=None):
     log_event("X2", "digest", needs=len(needs), wait=len(wait), archived=len(archived))
 
 
+def run_x3(messages):
+    decisions_match = _decisions_match_messages(messages)
+    dashboard_path = Path("dashboard.json")
+    trace_path = Path("trace.jsonl")
+
+    dashboard_citations_valid = False
+    if DASHBOARD_JSON.exists():
+        try:
+            dashboard = json.loads(DASHBOARD_JSON.read_text(encoding="utf-8"))
+            message_ids = {msg["id"] for msg in messages}
+            cited = [
+                message_id
+                for item in dashboard.get("commitments", [])
+                for message_id in item.get("cited", [])
+            ]
+            cited.extend(
+                message_id
+                for item in dashboard.get("conflicts", [])
+                for message_id in item.get("cited", [])
+            )
+            dashboard_citations_valid = bool(cited) and all(
+                message_id in message_ids for message_id in cited
+            )
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    r2_grounded = False
+    if R2_RESULTS_PATH.exists():
+        try:
+            r2_result = json.loads(R2_RESULTS_PATH.read_text(encoding="utf-8"))
+            r2_grounded = (
+                r2_result.get("grounding_result") == "YES"
+                and r2_result.get("draft_status") == "DRAFT"
+                and bool(r2_result.get("supporting_source_ids"))
+            )
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    present = set()
+    if trace_path.exists():
+        for line in trace_path.read_text(encoding="utf-8").splitlines():
+            try:
+                event = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if event.get("cap") in {"R1", "R2", "R3", "R4", "R5", "R6"}:
+                present.add(event["cap"])
+
+    trace_capabilities = [
+        cap for cap in ("R1", "R2", "R3", "R4", "R5", "R6") if cap in present
+    ]
+    result = {
+        "decisions_match_inbox": decisions_match,
+        "dashboard_citations_valid": dashboard_citations_valid,
+        "r2_grounded_evidence": r2_grounded,
+        "trace_capabilities_present": trace_capabilities,
+    }
+    print("Evidence audit")
+    print(f"Decisions match inbox: {'YES' if decisions_match else 'NO'}")
+    print(
+        "Dashboard citations valid: "
+        f"{'YES' if dashboard_citations_valid else 'NO'}"
+    )
+    print(f"R2 grounded evidence: {'YES' if r2_grounded else 'NO'}")
+    print(f"Trace capabilities present: {', '.join(trace_capabilities)}")
+    log_event("X3", "evidence_audit", **result)
+
+
 def _days_apart(start, end):
     from datetime import date
     a = date.fromisoformat(start)

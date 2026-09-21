@@ -14,6 +14,7 @@ from caps import (
     run_r4,
     run_r5,
     run_r6,
+    run_x3,
     run_x1,
     run_x2,
 )
@@ -43,7 +44,8 @@ def main():
         run_all(messages, args)
         return
 
-    clear_trace(args.cap.upper())
+    if args.cap.upper() != "R4":
+        clear_trace(args.cap.upper())
     run_one(args.cap.upper(), messages, args)
 
 
@@ -64,6 +66,8 @@ def run_one(cap, messages, args):
         run_x1(messages)
     elif cap == "X2":
         run_x2(messages)
+    elif cap == "X3":
+        run_x3(messages)
     else:
         print("unknown capability", cap)
 
@@ -93,6 +97,9 @@ def run_all(messages, args):
     print("\n=== X2 ===")
     clear_trace("X2")
     run_x2(messages)
+    print("\n=== X3 ===")
+    clear_trace("X3")
+    run_x3(messages)
 
 
 if __name__ == "__main__":

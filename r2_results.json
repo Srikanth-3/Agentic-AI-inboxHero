@@ -1,0 +1,12 @@
+{
+  "target_message_id": "m008",
+  "retrieval_method": "earlier message in same thread",
+  "supporting_source_ids": [
+    "m003"
+  ],
+  "draft_status": "DRAFT",
+  "grounding_result": "YES",
+  "reason": "Earlier same-thread message provides the required fact.",
+  "draft": "Hi Devika,\n\nI found the staging queue information in the earlier thread and there is no need to rotate credentials. Please point the second worker box at the AMQP URL from that earlier message and restart it. If it still fails, send the error details and I will follow up.\n\nSam",
+  "sensitive_url_redacted": "amqp://[redacted]@broker-stg.paperjet.io:5672/pjs"
+}

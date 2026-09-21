@@ -1,0 +1,4 @@
+# No pip packages required. Python 3.10+ stdlib only.
+# Ollama must be running locally:
+#   ollama pull qwen3:8b
+#   ollama serve
