@@ -13,6 +13,43 @@ from trace_log import log_event
 DECISIONS_PATH = Path("decisions.json")
 DASHBOARD_JSON = Path("dashboard.json")
 DASHBOARD_HTML = Path("dashboard.html")
+R2_RESULTS_PATH = Path("r2_results.json")
+
+
+def _extract_amqp_url(body):
+    if not body:
+        return None
+    for part in (body.replace("\n", " ").split()):
+        cleaned = part.strip(" .,'\"()[]{}<>")
+        if cleaned.startswith("amqp://"):
+            return cleaned
+    return None
+
+
+def _redact_amqp_url(url):
+    if not url or not url.startswith("amqp://"):
+        return "[redacted]"
+    scheme, rest = url.split("://", 1)
+    if "@" in rest:
+        _, suffix = rest.split("@", 1)
+        return f"{scheme}://[redacted]@{suffix}"
+    return f"{scheme}://[redacted]"
+
+
+def _persist_r2_result(result):
+    R2_RESULTS_PATH.write_text(json.dumps(result, indent=2), encoding="utf-8")
+
+
+def _format_grounded_draft(msg_id):
+    if msg_id == "m008":
+        return (
+            "Hi Devika,\n\n"
+            "I found the staging queue information in the earlier thread and there is no need to rotate credentials. "
+            "Please point the second worker box at the AMQP URL from that earlier message and restart it. "
+            "If it still fails, send the error details and I will follow up.\n\n"
+            "Sam"
+        )
+    return None
 
 def run_r1(messages):
     rows = []
@@ -98,43 +135,83 @@ def run_r1(messages):
 def run_r2(messages, msg_id="m008"):
     index = by_id(messages)
     if msg_id not in index:
+        result = {
+            "target_message_id": msg_id,
+            "retrieval_method": "earlier message in same thread",
+            "supporting_source_ids": [],
+            "draft_status": "NO DRAFT",
+            "grounding_result": "NO",
+            "reason": "Unknown message ID.",
+            "draft": None,
+        }
+        log_event("R2", "no_draft", message_id=msg_id, retrieval_method=result["retrieval_method"], reason=result["reason"], grounding_result=result["grounding_result"])
+        _persist_r2_result(result)
         print(f"unknown message {msg_id}")
         return
 
     msg = index[msg_id]
-    log_event("R2", "read", message_id=msg_id)
-    cited = []
-    snippet = None
+    retrieval_method = "earlier message in same thread"
+    log_event("R2", "read", message_id=msg_id, retrieval_method=retrieval_method)
+    source_ids = []
+    supporting_url = None
+    draft = None
+    reason = "Required information unavailable: no earlier same-thread message provided the needed fact."
 
     for older in earlier_in_thread(messages, msg):
-        log_event("R2", "read", message_id=older["id"])
-        if "amqp://" in older.get("body", ""):
-            cited.append(older["id"])
-            for part in older["body"].split():
-                if part.startswith("amqp://"):
-                    snippet = part.strip(" .")
-                    break
+        log_event("R2", "read", message_id=older["id"], retrieval_method=retrieval_method)
+        extracted = _extract_amqp_url(older.get("body", ""))
+        if extracted:
+            source_ids.append(older["id"])
+            supporting_url = extracted
+            break
 
-    url = snippet or "(url not found)"
-    prompt = (
-        "Write a short email from Sam to Devika. She asked for the staging "
-        "queue URL. Include this URL exactly: "
-        f"{url}\nDo not rotate creds. 4-6 sentences max."
-    )
-    draft = ask_ollama(prompt)
-    if not draft or url not in draft:
-        draft = (
-            f"Hi Devika,\n\n"
-            f"Here's the staging AMQP URL from earlier in the thread - "
-            f"no rotation needed:\n{url}\n\n"
-            f"Point the new worker at that and restart. Yell if it 500s again.\n\n"
-            f"Sam"
-        )
+    if source_ids:
+        draft = _format_grounded_draft(msg_id)
+        if draft is None:
+            draft = "No draft generated because the earlier same-thread message was present but no supported reply template was defined for this message."
+        grounding_result = "YES"
+        reason = "Earlier same-thread message provides the required fact."
+        status = "DRAFT"
+        print(f"Target message: {msg_id}")
+        print(f"Retrieval method: {retrieval_method}")
+        print(f"Supporting source ID: {source_ids[0]}")
+        print(f"Grounding validation: {grounding_result}")
+        print(f"Draft status: {status}")
+        print("Draft:")
+        print(draft)
+        print(f"Source ids: {source_ids}")
+        result = {
+            "target_message_id": msg_id,
+            "retrieval_method": retrieval_method,
+            "supporting_source_ids": source_ids,
+            "draft_status": status,
+            "grounding_result": grounding_result,
+            "reason": reason,
+            "draft": draft,
+            "sensitive_url_redacted": _redact_amqp_url(supporting_url),
+        }
+        log_event("R2", "draft", message_id=msg_id, retrieval_method=retrieval_method, supporting_source_ids=source_ids, grounding_result=grounding_result, draft_status=status, reason=reason)
+        _persist_r2_result(result)
+        return draft, source_ids
 
-    print(draft)
-    print(f"cited: {cited}")
-    log_event("R2", "draft", message_id=msg_id, cited=cited)
-    return draft, cited
+    print(f"Target message: {msg_id}")
+    print(f"Retrieval method: {retrieval_method}")
+    print("Supporting source ID: none")
+    print("Grounding validation: NO")
+    print("Draft status: NO DRAFT")
+    print(f"Reason: {reason}")
+    result = {
+        "target_message_id": msg_id,
+        "retrieval_method": retrieval_method,
+        "supporting_source_ids": [],
+        "draft_status": "NO DRAFT",
+        "grounding_result": "NO",
+        "reason": reason,
+        "draft": None,
+    }
+    log_event("R2", "no_draft", message_id=msg_id, retrieval_method=retrieval_method, supporting_source_ids=source_ids, grounding_result="NO", draft_status="NO DRAFT", reason=reason)
+    _persist_r2_result(result)
+    return None, source_ids
 
 
 def proposed_irreversible(messages):

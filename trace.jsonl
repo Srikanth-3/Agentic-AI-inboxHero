@@ -98,3 +98,14 @@
 {"ts": "2026-09-22T01:40:25", "cap": "R1", "event": "decision", "message_id": "m119", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
 {"ts": "2026-09-22T01:40:25", "cap": "R1", "event": "decision", "message_id": "m095", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
 {"ts": "2026-09-22T01:40:25", "cap": "R1", "event": "decision", "message_id": "m071", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:47:07", "cap": "R2", "event": "read", "message_id": "m008"}
+{"ts": "2026-09-22T01:47:07", "cap": "R2", "event": "read", "message_id": "m001"}
+{"ts": "2026-09-22T01:47:07", "cap": "R2", "event": "read", "message_id": "m003"}
+{"ts": "2026-09-22T01:47:07", "cap": "R2", "event": "read", "message_id": "m005"}
+{"ts": "2026-09-22T01:47:30", "cap": "R2", "event": "draft", "message_id": "m008", "cited": ["m003"]}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "read", "message_id": "m008", "retrieval_method": "earlier message in same thread"}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "read", "message_id": "m001", "retrieval_method": "earlier message in same thread"}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "read", "message_id": "m003", "retrieval_method": "earlier message in same thread"}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "draft", "message_id": "m008", "retrieval_method": "earlier message in same thread", "supporting_source_ids": ["m003"], "grounding_result": "YES", "draft_status": "DRAFT", "reason": "Earlier same-thread message provides the required fact."}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "read", "message_id": "m012", "retrieval_method": "earlier message in same thread"}
+{"ts": "2026-09-22T01:51:14", "cap": "R2", "event": "no_draft", "message_id": "m012", "retrieval_method": "earlier message in same thread", "supporting_source_ids": [], "grounding_result": "NO", "draft_status": "NO DRAFT", "reason": "Required information unavailable: no earlier same-thread message provided the needed fact."}
