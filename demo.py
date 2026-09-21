@@ -40,12 +40,10 @@ def main():
 
     messages = load_inbox()
     if args.all:
-        clear_trace()
         run_all(messages, args)
         return
 
-    if args.cap.upper() not in ("R3", "R4"):
-        clear_trace()
+    clear_trace(args.cap.upper())
     run_one(args.cap.upper(), messages, args)
 
 
@@ -72,20 +70,28 @@ def run_one(cap, messages, args):
 
 def run_all(messages, args):
     print("\n=== R1 ===")
+    clear_trace("R1")
     run_r1(messages)
     print("\n=== R2 ===")
+    clear_trace("R2")
     run_r2(messages, msg_id=args.msg)
     print("\n=== R3 ===")
+    clear_trace("R3")
     run_r3(messages, dry_run=True)
     print("\n=== R4 ===")
+    clear_trace("R4")
     run_r4(messages, apply_now=True)
     print("\n=== R5 ===")
+    clear_trace("R5")
     run_r5(messages)
     print("\n=== R6 ===")
+    clear_trace("R6")
     run_r6(messages)
     print("\n=== X1 ===")
+    clear_trace("X1")
     run_x1(messages)
     print("\n=== X2 ===")
+    clear_trace("X2")
     run_x2(messages)
 
 

@@ -614,7 +614,16 @@ def run_r6(messages):
     print("Conflicts:")
     for item in conflicts:
         print(f"  - {item['text']} cited {item['cited']}")
-    log_event("R6", "dashboard", commitments=len(commitments), conflicts=len(conflicts))
+    log_event(
+        "R6",
+        "dashboard",
+        pending=len(payload["pending"]),
+        flagged=len(payload["flagged"]),
+        commitments=len(payload["commitments"]),
+        conflicts=len(payload["conflicts"]),
+        commitment_citations=[item["cited"] for item in payload["commitments"]],
+        conflict_citations=[item["cited"] for item in payload["conflicts"]],
+    )
 
 
 def render_dashboard(payload):
