@@ -38,6 +38,7 @@ python demo.py --cap R4
 ```
 
 First run writes `prefs.json` and exits. Second run CCs Priya on the Hartwell & Cho mail.
+The demonstrated preference is `cc_legal`, learned from `m015`; the second process reloads it from disk and applies it to later message `m018` (and the other Hartwell & Cho messages). R4 trace evidence uses `pref_store`, `process_boundary`, `pref_reload`, and `pref_apply` events.
 
 ## How it is put together
 

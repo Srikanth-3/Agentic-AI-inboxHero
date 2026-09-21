@@ -44,7 +44,7 @@ def main():
         run_all(messages, args)
         return
 
-    if args.cap.upper() != "R3":
+    if args.cap.upper() not in ("R3", "R4"):
         clear_trace()
     run_one(args.cap.upper(), messages, args)
 

@@ -414,11 +414,36 @@ def run_r4(messages, apply_now=False):
         save_prefs(prefs)
         print("stored prefs.json:")
         print(json.dumps(prefs, indent=2))
-        log_event("R4", "pref_store", prefs=prefs)
+        log_event(
+            "R4",
+            "pref_store",
+            preference="cc_legal",
+            value=prefs.get("cc_legal"),
+            source_message_id=prefs.get("cc_legal_source"),
+            storage="prefs.json",
+            invocation="first",
+        )
         if not apply_now:
+            log_event(
+                "R4",
+                "process_boundary",
+                boundary="first invocation ends; run R4 again in a new process",
+                next_invocation="second",
+            )
             print("Process exiting. Run the same command again to apply them.")
             return
         existing = load_prefs()
+
+    else:
+        log_event(
+            "R4",
+            "pref_reload",
+            preference="cc_legal",
+            value=existing.get("cc_legal"),
+            source_message_id=existing.get("cc_legal_source"),
+            storage="prefs.json",
+            invocation="second",
+        )
 
     print("loaded prefs from disk:", json.dumps(existing, indent=2))
     legal = []
@@ -432,7 +457,15 @@ def run_r4(messages, apply_now=False):
         print(f"{msg['id']} {msg['subject']}")
         print(f"  To: {msg['from']}")
         print(f"  CC: {', '.join(cc)}")
-        log_event("R4", "pref_apply", message_id=msg["id"], cc=cc)
+        log_event(
+            "R4",
+            "pref_apply",
+            message_id=msg["id"],
+            preference="cc_legal",
+            source_message_id=existing.get("cc_legal_source"),
+            behavior_change="CC includes persisted preference",
+            cc=cc,
+        )
 
     if too_early("09:00"):
         print("m043 Monday 9:00am would be declined (no meetings before 11:00).")
