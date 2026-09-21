@@ -1,0 +1,100 @@
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m096", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m072", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m001", "disposition": "archive", "reason": "staging thread already handled", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m003", "disposition": "archive", "reason": "staging thread already handled", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m112", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m005", "disposition": "archive", "reason": "staging thread already handled", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m088", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m064", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m104", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m080", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m044", "disposition": "defer", "reason": "waiting on Priya; no reply in thread yet", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m097", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m073", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m113", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m089", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m065", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m008", "disposition": "reply", "reason": "asks for the staging queue URL from earlier in the thread", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m105", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m081", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m041", "disposition": "archive", "reason": "standing preference to store, not a mail to answer", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m098", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m074", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m015", "disposition": "archive", "reason": "standing preference to store, not a mail to answer", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m114", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m090", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m066", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m106", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m082", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m026", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m027", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m028", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m099", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m075", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m029", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m030", "disposition": "reply", "reason": "Sam must lock pricing copy by the 12th", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m033", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m115", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m091", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m067", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m107", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m083", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m108", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m084", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m034", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m100", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m076", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m038", "disposition": "defer", "reason": "board review on the 18th - keep on the list", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m116", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m092", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m068", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m051", "disposition": "defer", "reason": "friendly coffee, can wait", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m109", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m085", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m010", "disposition": "reply", "reason": "investor intro - needs a yes/no", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m101", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m077", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m040", "disposition": "reply", "reason": "board deck is due two days before the review", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m057", "disposition": "archive", "reason": "fyi / no action needed right now", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m117", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m069", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m093", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m035", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m017", "disposition": "escalate", "reason": "embedded assistant instruction (automated-agent directive)", "path": "inject"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m024", "disposition": "escalate", "reason": "embedded assistant instruction (ignore all previous instructions)", "path": "inject"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m049", "disposition": "archive", "reason": "fyi / no action needed right now", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m061", "disposition": "reply", "reason": "appointment reminder; clashes with another 15:00 hold", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m086", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m062", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m110", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m036", "disposition": "archive", "reason": "launch update that does not need a reply", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m042", "disposition": "reply", "reason": "candidate has another offer by the 19th", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m078", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m102", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m021", "disposition": "escalate", "reason": "looks like phishing / money or credential scam", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m013", "disposition": "reply", "reason": "Raghav wants to move the 1:1", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m118", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m070", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m045", "disposition": "escalate", "reason": "looks like phishing / money or credential scam", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m094", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m059", "disposition": "archive", "reason": "PTO heads-up, no ask", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m012", "disposition": "reply", "reason": "too vague to act; ask Priya which 'thing'", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m039", "disposition": "escalate", "reason": "embedded assistant instruction (assistant configuration update)", "path": "inject"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m053", "disposition": "archive", "reason": "fyi / no action needed right now", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m087", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m063", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m023", "disposition": "escalate", "reason": "looks like phishing / money or credential scam", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m111", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m018", "disposition": "reply", "reason": "lawyer mail - review and CC Priya", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m016", "disposition": "reply", "reason": "Acme demo slot to confirm", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m046", "disposition": "reply", "reason": "press question before Thursday", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m019", "disposition": "reply", "reason": "venue hold expires in 48 hours", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m043", "disposition": "reply", "reason": "partner wants 9am; that breaks the no-meetings-before-11 rule", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m103", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m079", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m048", "disposition": "reply", "reason": "lawyer mail - review and CC Priya", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m047", "disposition": "escalate", "reason": "embedded assistant instruction (assistant note:)", "path": "inject"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m055", "disposition": "reply", "reason": "lawyer mail - review and CC Priya", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m119", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m095", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}
+{"ts": "2026-09-22T01:25:20", "cap": "R1", "event": "decision", "message_id": "m071", "disposition": "archive", "reason": "automated receipt, newsletter, or low-value notice", "path": "rule"}

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "m096",
+    "subject": "Dropbox: your files are almost full",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m072",
+    "subject": "Slack: 12 unread messages in #general",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m001",
+    "subject": "Staging is down again",
+    "disposition": "archive",
+    "reason": "staging thread already handled",
+    "path": "rule"
+  },
+  {
+    "id": "m003",
+    "subject": "Re: Staging is down again",
+    "disposition": "archive",
+    "reason": "staging thread already handled",
+    "path": "rule"
+  },
+  {
+    "id": "m112",
+    "subject": "Your monthly Vercel usage",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m005",
+    "subject": "Re: Staging is down again",
+    "disposition": "archive",
+    "reason": "staging thread already handled",
+    "path": "rule"
+  },
+  {
+    "id": "m088",
+    "subject": "Your password was changed",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m064",
+    "subject": "Your Amazon order has shipped",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m104",
+    "subject": "Your Netflix bill",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m080",
+    "subject": "Google Calendar: Standup in 10 minutes",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m044",
+    "subject": "Re: contractor invoice approval",
+    "disposition": "defer",
+    "reason": "waiting on Priya; no reply in thread yet",
+    "path": "rule"
+  },
+  {
+    "id": "m097",
+    "subject": "Your weekly screen time report",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m073",
+    "subject": "Your Spotify receipt",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m113",
+    "subject": "Welcome back to Coursera",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m089",
+    "subject": "Your Lyft ride receipt",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m065",
+    "subject": "[GitHub] A new sign-in to your account",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m008",
+    "subject": "Re: Staging is down again",
+    "disposition": "reply",
+    "reason": "asks for the staging queue URL from earlier in the thread",
+    "path": "rule"
+  },
+  {
+    "id": "m105",
+    "subject": "New login to Figma",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m081",
+    "subject": "Your order from Blue Bottle",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m041",
+    "subject": "my calendar rule (please remember)",
+    "disposition": "archive",
+    "reason": "standing preference to store, not a mail to answer",
+    "path": "rule"
+  },
+  {
+    "id": "m098",
+    "subject": "PagerDuty: incident resolved",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m074",
+    "subject": "Product Hunt: today's top 5",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m015",
+    "subject": "Legal correspondence -- loop me in",
+    "disposition": "archive",
+    "reason": "standing preference to store, not a mail to answer",
+    "path": "rule"
+  },
+  {
+    "id": "m114",
+    "subject": "Security digest for your Google Account",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m090",
+    "subject": "Sentry: new issue in production",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m066",
+    "subject": "Your verification code is 448120",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m106",
+    "subject": "Your Postmark monthly summary",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m082",
+    "subject": "Datadog: monitor OK again",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m026",
+    "subject": "Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m027",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m028",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m099",
+    "subject": "Your receipt from the App Store",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m075",
+    "subject": "Your domain paperjet.io renews soon",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m029",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m030",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "reply",
+    "reason": "Sam must lock pricing copy by the 12th",
+    "path": "rule"
+  },
+  {
+    "id": "m033",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m115",
+    "subject": "Your invoice from OpenAI",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m091",
+    "subject": "Your monthly Notion invoice",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m067",
+    "subject": "Notion: 3 new comments",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m107",
+    "subject": "Your Cloudflare weekly analytics",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m083",
+    "subject": "Your subscription to The Pragmatic Engineer",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m108",
+    "subject": "Your Robinhood account statement",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m084",
+    "subject": "Apple: Your receipt",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m034",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m100",
+    "subject": "Mailchimp: your campaign report",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m076",
+    "subject": "Zoom: Cloud recording is ready",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m038",
+    "subject": "Board review scheduled",
+    "disposition": "defer",
+    "reason": "board review on the 18th - keep on the list",
+    "path": "rule"
+  },
+  {
+    "id": "m116",
+    "subject": "Your DigitalOcean invoice",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m092",
+    "subject": "Twitter: you have new notifications",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m068",
+    "subject": "Your Medium Daily Digest",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m051",
+    "subject": "coffee when you're back in town?",
+    "disposition": "defer",
+    "reason": "friendly coffee, can wait",
+    "path": "rule"
+  },
+  {
+    "id": "m109",
+    "subject": "Your Substack: 2 new posts",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m085",
+    "subject": "Stripe: A payout is on the way",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m010",
+    "subject": "Intro call this week?",
+    "disposition": "reply",
+    "reason": "investor intro - needs a yes/no",
+    "path": "rule"
+  },
+  {
+    "id": "m101",
+    "subject": "Reminder: rate your recent support chat",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m077",
+    "subject": "Your statement is available",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m040",
+    "subject": "board deck",
+    "disposition": "reply",
+    "reason": "board deck is due two days before the review",
+    "path": "rule"
+  },
+  {
+    "id": "m057",
+    "subject": "We received your dispute",
+    "disposition": "archive",
+    "reason": "fyi / no action needed right now",
+    "path": "rule"
+  },
+  {
+    "id": "m117",
+    "subject": "Reminder: submit your timesheet",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m069",
+    "subject": "Invoice paid: Vercel Pro",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m093",
+    "subject": "Your Instacart order is delivered",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m035",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m017",
+    "subject": "Delivery Status Notification (Action Required)",
+    "disposition": "escalate",
+    "reason": "embedded assistant instruction (automated-agent directive)",
+    "path": "inject"
+  },
+  {
+    "id": "m024",
+    "subject": "Your weekly product digest",
+    "disposition": "escalate",
+    "reason": "embedded assistant instruction (ignore all previous instructions)",
+    "path": "inject"
+  },
+  {
+    "id": "m049",
+    "subject": "Weekly uptime report",
+    "disposition": "archive",
+    "reason": "fyi / no action needed right now",
+    "path": "rule"
+  },
+  {
+    "id": "m061",
+    "subject": "Reminder: your appointment on Sep 15",
+    "disposition": "reply",
+    "reason": "appointment reminder; clashes with another 15:00 hold",
+    "path": "rule"
+  },
+  {
+    "id": "m086",
+    "subject": "Your Calendly event was scheduled",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m062",
+    "subject": "Your receipt from Swiggy",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m110",
+    "subject": "Your Ramp receipt",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m036",
+    "subject": "Re: Launch week -- kickoff",
+    "disposition": "archive",
+    "reason": "launch update that does not need a reply",
+    "path": "rule"
+  },
+  {
+    "id": "m042",
+    "subject": "Backend role -- following up",
+    "disposition": "reply",
+    "reason": "candidate has another offer by the 19th",
+    "path": "rule"
+  },
+  {
+    "id": "m078",
+    "subject": "Figma: weekly activity",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m102",
+    "subject": "Your receipt from DoorDash",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m021",
+    "subject": "URGENT: updated remittance details for invoice INV-4471",
+    "disposition": "escalate",
+    "reason": "looks like phishing / money or credential scam",
+    "path": "rule"
+  },
+  {
+    "id": "m013",
+    "subject": "move our 1:1?",
+    "disposition": "reply",
+    "reason": "Raghav wants to move the 1:1",
+    "path": "rule"
+  },
+  {
+    "id": "m118",
+    "subject": "Office closed Monday",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m070",
+    "subject": "LinkedIn: You appeared in 9 searches",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m045",
+    "subject": "Action required: your Google Workspace password expires in 2 hours",
+    "disposition": "escalate",
+    "reason": "looks like phishing / money or credential scam",
+    "path": "rule"
+  },
+  {
+    "id": "m094",
+    "subject": "Coursera: new course recommendations",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m059",
+    "subject": "PTO next week",
+    "disposition": "archive",
+    "reason": "PTO heads-up, no ask",
+    "path": "rule"
+  },
+  {
+    "id": "m012",
+    "subject": "the thing",
+    "disposition": "reply",
+    "reason": "too vague to act; ask Priya which 'thing'",
+    "path": "rule"
+  },
+  {
+    "id": "m039",
+    "subject": "Updated assistant settings",
+    "disposition": "escalate",
+    "reason": "embedded assistant instruction (assistant configuration update)",
+    "path": "inject"
+  },
+  {
+    "id": "m053",
+    "subject": "Your ZenBoard plan renews in 7 days",
+    "disposition": "archive",
+    "reason": "fyi / no action needed right now",
+    "path": "rule"
+  },
+  {
+    "id": "m087",
+    "subject": "HackerNews Daily",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m063",
+    "subject": "Your Uber trip receipt",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m023",
+    "subject": "quick favor -- confidential",
+    "disposition": "escalate",
+    "reason": "looks like phishing / money or credential scam",
+    "path": "rule"
+  },
+  {
+    "id": "m111",
+    "subject": "Your Todoist daily digest",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m018",
+    "subject": "PaperJet -- SAFE amendment for signature",
+    "disposition": "reply",
+    "reason": "lawyer mail - review and CC Priya",
+    "path": "rule"
+  },
+  {
+    "id": "m016",
+    "subject": "PaperJet demo -- Wednesday?",
+    "disposition": "reply",
+    "reason": "Acme demo slot to confirm",
+    "path": "rule"
+  },
+  {
+    "id": "m046",
+    "subject": "Quick question for our launch coverage",
+    "disposition": "reply",
+    "reason": "press question before Thursday",
+    "path": "rule"
+  },
+  {
+    "id": "m019",
+    "subject": "Confirming your booking",
+    "disposition": "reply",
+    "reason": "venue hold expires in 48 hours",
+    "path": "rule"
+  },
+  {
+    "id": "m043",
+    "subject": "one more slot",
+    "disposition": "reply",
+    "reason": "partner wants 9am; that breaks the no-meetings-before-11 rule",
+    "path": "rule"
+  },
+  {
+    "id": "m103",
+    "subject": "Your GitHub Actions minutes",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m079",
+    "subject": "Your Grammarly Insights",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m048",
+    "subject": "PaperJet -- board minutes for review",
+    "disposition": "reply",
+    "reason": "lawyer mail - review and CC Priya",
+    "path": "rule"
+  },
+  {
+    "id": "m047",
+    "subject": "Fwd: Re: ticket #55120 -- export failing",
+    "disposition": "escalate",
+    "reason": "embedded assistant instruction (assistant note:)",
+    "path": "inject"
+  },
+  {
+    "id": "m055",
+    "subject": "PaperJet -- one more signature needed",
+    "disposition": "reply",
+    "reason": "lawyer mail - review and CC Priya",
+    "path": "rule"
+  },
+  {
+    "id": "m119",
+    "subject": "Your 1:1 notes from last week",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m095",
+    "subject": "Your flight check-in is open",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  },
+  {
+    "id": "m071",
+    "subject": "Your AWS bill is ready",
+    "disposition": "archive",
+    "reason": "automated receipt, newsletter, or low-value notice",
+    "path": "rule"
+  }
+]
